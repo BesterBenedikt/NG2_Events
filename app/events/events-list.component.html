@@ -1,3 +1,3 @@
     <h1>Upcoming Sport Events</h1>
     <hr>
-    <events-thumbnail [event] = "event_export"></events-thumbnail>
+    <events-thumbnail [event] = "event_export" (eventClick)="handleEventClicked($event)"></events-thumbnail>
