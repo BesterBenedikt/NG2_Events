@@ -8,7 +8,4 @@ import {Component} from  '@angular/core'
 export class EventsListComponent {
 
     event_export = {name:"Football", location:"Munich"}
-    handleEventClicked(data) {
-        console.log('received', data)
-    }
 }
