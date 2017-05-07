@@ -7,6 +7,6 @@ import {Component} from  '@angular/core'
 
 export class EventsListComponent {
 
-    event = {name:"Football", location:"Munich"}
+    event_export = {name:"Football", location:"Munich"}
 
 }
