@@ -9,4 +9,9 @@ export class EventsThumbnailComponent {
 
     @Input() event:any;
 
+    someProperty:string = "some Property";
+
+    logFoo() {
+        console.log('logFoo()')
+    }
 }
