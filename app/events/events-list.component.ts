@@ -1,11 +1,13 @@
 import {Component} from  '@angular/core'
-
+import {EventService} from '../shared/event.service'
 @Component({
     selector:'events-list',
     templateUrl:'app/events/events-list.component.html'
 })
 
 export class EventsListComponent {
-
-    events_export = [{name:"Football", location:"Munich", start:"08:00"}, {name:"Gymnastics",location:"Berlin", start:"10:00"},{name:"Baseball",location:"NYC", start:"08:00"},{location:"nowhere", start:"08:00"},{name:"Basketball",location:"Chicago",start:"18:00"}]
+   events_export:any[]
+   constructor(private eventService: EventService){
+   this.events_export = eventService.getEvents()
+   }
 }
