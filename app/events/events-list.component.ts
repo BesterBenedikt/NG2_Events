@@ -8,6 +8,9 @@ import {EventService} from '../shared/event.service'
 export class EventsListComponent {
    events_export:any[]
    constructor(private eventService: EventService){
-   this.events_export = eventService.getEvents()
+   }
+
+   ngOnInit(){
+    this.events_export = this.eventService.getEvents()
    }
 }
