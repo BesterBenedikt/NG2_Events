@@ -1,3 +1,8 @@
     <h1>Upcoming Sport Events</h1>
     <hr>
-    <events-thumbnail [event] = "event_export"></events-thumbnail>
+
+    <div class="row">
+            <div *ngFor="let event of events_export"  class="col-md-5">
+                <events-thumbnail [event] = "event"></events-thumbnail>
+            </div>
+    </div>
