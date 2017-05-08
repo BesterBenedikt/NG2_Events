@@ -1,4 +1,11 @@
     <div class="well hoverwell thumbnail" [hidden]="!event.name">       
        <div>Name:   {{event?.name }}</div>
        <div>Location:   {{event?.location }}</div>
+
+       <div [ngSwitch]="event?.start">
+           Start: {{event?.start}}
+                <span *ngSwitchCase="'08:00'">(Early Start)</span>
+                <span *ngSwitchCase="'18:00'">(Late Start)</span>
+                <span *ngSwitchDefault>(Normal Start)</span>
+        
     </div>
