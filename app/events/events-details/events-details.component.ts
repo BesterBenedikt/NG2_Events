@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {EventService} from '../../shared/event.service'
 @Component({
-    templateUrl: '/events/events-details/events-details.html'
+    templateUrl: 'app/events/events-details/events-details.html'
 })
 
 export class EventsDetailsComponent implements OnInit {
@@ -11,8 +11,10 @@ export class EventsDetailsComponent implements OnInit {
 
     }
 
-    ngOnInit(): void {
-        this.event = this.eventsService.getEvent(1)        
+    ngOnInit() {
+        console.log('EventsDetailsCompoent ngOnInit invoked')
+        this.event = this.eventsService.getEvent(2)       
+        console.log('Event-ID:' +this.event.id) 
     }
     
 
