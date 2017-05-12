@@ -6,12 +6,12 @@ import {ToastrService} from '../common/toastr.service'
 })
 
 export class EventsListComponent {
-   events_export:any[]
+   events_export:any
    constructor(private eventService: EventService,private toastrService: ToastrService){
    }
 
    ngOnInit(){
-    this.events_export = this.eventService.getEvents()
+   this.eventService.getEvents().subscribe(events => {this.events_export = events})
    }
 
    handleThumbnailClick(eventName){
