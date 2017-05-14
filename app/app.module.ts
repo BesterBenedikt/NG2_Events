@@ -20,7 +20,8 @@ import {
 } from './events/index'
 
 
-
+import {AuthService} from './user/auth.service'
+/*Providers have to be declared only in the highest module they are used <-> declarations in every module*/
 
 
 
@@ -30,7 +31,7 @@ import {
         BrowserModule,
         RouterModule.forRoot(appRoutes)],
     declarations: [EventsAppComponent,EventsListComponent,EventsDetailsComponent, EventsThumbnailComponent,NavBarComponent,EventCreateComponent,Error404Component],
-    providers: [EventService,ToastrService,EventRouteActivator],
+    providers: [EventService,ToastrService,EventRouteActivator,AuthService],
     bootstrap: [EventsAppComponent]
 }) 
 

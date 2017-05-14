@@ -6,7 +6,7 @@ import  {IEvent, ISession} from './event.model'
 export class EventService {
   getEvents():Observable<IEvent[]> {
     let subject = new Subject<IEvent[]>()
-    setTimeout(() => {subject.next(EVENTS); subject.complete(); }, 100)
+    setTimeout(() => {subject.next(EVENTS); subject.complete(); }, 1)
     return subject
   }
 
