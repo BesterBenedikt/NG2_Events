@@ -38,7 +38,7 @@ const EVENTS:IEvent[] = [
     {
       id: 2,
       name: 'Football',
-      date: new Date('12/6/2036'),
+      date: new Date('11/9/1991'),
       start: '18:00',
       location: {
         address:"Buschingstr. 21",
