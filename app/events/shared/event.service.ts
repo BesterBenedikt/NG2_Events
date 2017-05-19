@@ -13,7 +13,12 @@ export class EventService {
     getEvent(id:number):IEvent{
 
         return EVENTS.find(event => event.id==id)
+    }
 
+    saveEvent(event) {      
+      event.id = 999
+      EVENTS.push(event)
+         
     }
 }
 
@@ -34,6 +39,11 @@ const EVENTS:IEvent[] = [
       id: 2,
       name: 'Football',
       date: new Date('12/6/2036'),
-      start: '18:00'
+      start: '18:00',
+      location: {
+        address:"Buschingstr. 21",
+        city:"Munich",
+        country:"Bavaria"
+      }
     }
   ]

@@ -3,12 +3,14 @@ export interface IEvent {
       name: string 
       start:string
       date:Date
+      price?:number
       location?:{
           address:string
           city:string
           country:string
       }
       onlineUrl?:string
+      imageUrl?:string
       //*sessions:ISession[]
 }
 

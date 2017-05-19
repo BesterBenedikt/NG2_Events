@@ -1,6 +1,7 @@
 import { NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import {RouterModule} from '@angular/router'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import {appRoutes} from './routes'
 import {EventsAppComponent} from './events-app.component'
@@ -29,7 +30,10 @@ import {AuthService} from './user/auth.service'
 @NgModule({
     imports: [
         BrowserModule,
-        RouterModule.forRoot(appRoutes)],
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule.forRoot(appRoutes)
+        ],
     declarations: [EventsAppComponent,EventsListComponent,EventsDetailsComponent, EventsThumbnailComponent,NavBarComponent,EventCreateComponent,Error404Component],
     providers: [EventService,ToastrService,EventRouteActivator,AuthService],
     bootstrap: [EventsAppComponent]
